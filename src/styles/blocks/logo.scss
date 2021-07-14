@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  @include roboto-mono('light');
+  text-decoration: none;
+  color: white;
+}
+
+.logo__name {
+  font-size: 48px;
+  letter-spacing: -0.11em;
+}
+
+.logo__sup {
+  @include roboto('bold');
+  font-size: 20px;
+  margin-left: -5px;
+}

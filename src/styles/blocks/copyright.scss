@@ -1,0 +1,19 @@
+.copyright {
+  @include roboto-mono('bold');
+  color: $footer-color;
+  font-size: 24px;
+  white-space: nowrap;
+  padding-right: 30px;
+}
+
+@include media-breakpoint-down(xxl) {
+  .copyright {
+    font-size: 22px;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .copyright {
+    font-size: 20px;
+  }
+}

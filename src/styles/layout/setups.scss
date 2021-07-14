@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+html {
+  @include media-breakpoint-down(xxl) {
+    font-size: 15px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 15px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 14px;
+  }
+  
+  @include media-breakpoint-down(md) {
+    font-size: 13px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 11px;
+  }
+}
+
+body {
+  @include roboto-mono();
+  line-height: 1.42;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.maincontent {
+  min-height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr $footer-min-height;
+  grid-template-areas: 
+    "content"
+    "footer";
+  grid-gap: 30px 0;  
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 107px;
+  max-width: map-get($map: $container-width, $key: xxl);
+
+  @include media-breakpoint-down(xl) {
+    padding: 0 60px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 15px;
+  }
+
+  // @include media-breakpoint-down(xxl) {
+  //   background-color: salmon;
+  //   max-width: map-get($map: $container-width, $key: xxl);
+  // }
+
+  // @include media-breakpoint-down(xl) {
+  //   background-color: goldenrod;
+  //   max-width: map-get($map: $container-width, $key: xl);
+  // }
+
+  // @include media-breakpoint-down(lg) {
+  //   background-color: red;
+  //   max-width: map-get($map: $container-width, $key: lg);
+  // }
+
+  // @include media-breakpoint-down(md) {
+  //   background-color: blueviolet;
+  //   max-width: map-get($map: $container-width, $key: md);
+  // }
+
+  // @include media-breakpoint-down(sm) {
+  //   background-color: burlywood;
+  //   max-width: map-get($map: $container-width, $key: sm);
+  // }
+
+  // @include media-breakpoint-down(xs) {
+  //   background-color: burlywood;
+  //   max-width: map-get($map: $container-width, $key: xs);
+  // }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}

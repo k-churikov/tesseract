@@ -1,0 +1,26 @@
+.header {
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.header__container {
+  display: grid;
+  grid-template: 
+    "left right" 1fr
+    / 1fr 1fr;
+  align-items: center;
+  align-self: center;
+  height: 100%;
+}
+
+.header__left {
+  grid-area: left;
+  display: flex;
+  align-items: center;
+}
+.header__right {
+  grid-area: right;
+  justify-self: end;
+}

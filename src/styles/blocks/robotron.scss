@@ -1,0 +1,247 @@
+.robotron {
+  min-height: 724px;
+  background: url('../images/decor/fakurian.jpg') no-repeat bottom center #416985;
+  background-size: cover;
+  position: relative;
+  margin: 0 -107px 60px -107px;
+
+  @include retina() {
+    background: url('../images/decor/fakurian@2x.jpg') no-repeat bottom center #416985;
+    background-size: cover;
+  }
+
+  &_active {
+    .robotron__layer {
+      background-color: rgba(51, 67, 90, 0.9);
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+      height: 100%;
+      visibility: visible;
+
+      .menu {
+        align-items: flex-start;
+        display: flex;
+      }
+
+      .menu__item {
+        &:after,
+        &:before {
+          left: 0;
+        }
+
+        &_active {
+          &:after {
+            left: 100%;
+          }
+
+          .menu__link {
+            color: $active;
+          }
+        }
+
+        &:hover {
+          &:after {
+            left: 100%;
+          }
+        }
+      }
+
+      .menu__link {
+        color: white;
+        padding: 5px 20px 5px 0;
+      }
+    }
+
+    .robotron__btn {
+      display: none;
+    }
+
+    .robotron__title {
+      margin-bottom: 47px;
+    }
+
+    .language {
+      display: block;
+      margin-left: auto;
+      margin-bottom: 30px;
+      align-self: flex-end;
+    }
+  }
+}
+
+.container__robotron {
+  min-height: 724px;
+  display: grid;
+  grid-template: 
+    "top top" 
+    "bottom bottom" min-content
+    / 1fr 1fr;
+}
+
+.robotron__title {
+  grid-row: 1 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.robotron__svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.robotron__decore {
+  width: 100%;
+  min-height: 724px;
+}
+
+.robotron__menu {
+  align-self: center;
+}
+
+.robotron__btn {
+  position: relative;
+  min-width: 370px;
+  height: 64px;
+  z-index: 1;
+  grid-row: 2 / 3;
+  border: none;
+  @include roboto('bold');
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  margin: 0 30px 50px 130px;
+  cursor: pointer;
+  background-color: $active;
+  transition: background-color .3s;
+  // background: 
+  //   linear-gradient(125deg, transparent 10%, $active 0) top left,
+  //   linear-gradient(-125deg, transparent 10%, $active 0) top right,
+  //   linear-gradient(-55deg, transparent 10%, $active 0) bottom right,
+  //   linear-gradient(55deg, transparent 10%, $active 0) bottom left;
+  // background-size: 50% 50%;
+  // background-repeat: no-repeat;
+
+  &:after,
+  &:before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    display: block;
+    transition: border-color .3s;
+  }
+
+  &:after {
+    left: 100%;
+    border-color: transparent transparent transparent $active;
+    border-style: solid;
+    border-width: 32px 0 32px 20px;
+  }
+
+  &:before {
+    right: 100%;
+    border-color: transparent $active transparent transparent;
+    border-style: solid;
+    border-width: 32px 20px 32px 0;
+  }
+
+  &:hover {
+    background-color: $active-dark;
+
+    &:after {
+      border-color: transparent transparent transparent $active-dark;
+    }
+  
+    &:before {
+      border-color: transparent $active-dark transparent transparent;
+    }
+  }
+}
+
+.robotron__layer {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: height .3s;
+  transition: background-color .3s;
+}
+
+@include media-breakpoint-down(xl) {
+  .robotron {
+    margin: 0 -60px 60px -60px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .container__robotron {
+    grid-template: 
+      "top" 1fr
+      "bottom" min-content
+      / 1fr;
+  }
+
+  .robotron__title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: 40px;
+    align-self: end;
+    line-height: 47px;
+    margin-bottom: 15px;
+  }
+
+  .robotron__btn {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
+
+  .robotron__svg {
+    display: none;
+  }
+
+  .robotron__btn {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-bottom: -32px;
+  }
+
+  .robotron__menu {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .robotron {
+    margin: 0 -15px 60px -15px;
+  }
+
+  .robotron__btn {
+    justify-self: stretch;
+    margin-left: 16px;
+    margin-right: 16px;
+    // width: 95%;
+    // background: 
+    // linear-gradient(125deg, transparent 8%, $active 0) top left,
+    // linear-gradient(-125deg, transparent 8%, $active 0) top right,
+    // linear-gradient(-55deg, transparent 8%, $active 0) bottom right,
+    // linear-gradient(55deg, transparent 8%, $active 0) bottom left;
+  }
+
+  .robotron {
+    &_active {
+      .robotron__layer {
+        padding: 0 15px;
+      }
+    }
+  }
+}

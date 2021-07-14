@@ -1,0 +1,39 @@
+section.robotron
+  .robotron__layer
+    nav.navigation
+      ul.menu.menu_layer
+        each name in ['About', 'Facts', 'History', 'Gallery', 'Contacts']
+          if name == 'Facts'
+            li(class=`menu__item menu__item_active`)
+              a(class=`menu__link` href='#')= name
+          else    
+            li(class=`menu__item`)
+              a(class=`menu__link` href='#')= name
+    ul.language.language_layer
+      each name in ['ru', 'en']
+        if name == 'en'
+          li(class=`language__item language__item_active`)
+            a(class=`language__link` href='#')= name
+        else  
+          li(class=`language__item`)
+            a(class=`language__link` href='#')= name        
+  .container.container__robotron
+    h1.title.robotron__title The 
+        span.title__upper one,
+        .robotron__description the 
+          span.title__upper only
+    .robotron__svg
+      <svg class="robotron__decore">
+        <use xlink:href="images/decor/robotron.svg#robo"></use>
+      </svg>
+    button.robotron__btn buy now
+    .robotron__menu
+      nav.navigation
+        ul.menu
+          each name in ['About', 'Facts', 'History', 'Gallery', 'Contacts']
+            if name == 'Facts'
+              li(class=`menu__item menu__item_active`)
+                a(class=`menu__link` href='#')= name
+            else    
+              li(class=`menu__item`)
+                a(class=`menu__link` href='#')= name

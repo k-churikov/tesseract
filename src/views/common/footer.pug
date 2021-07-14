@@ -1,0 +1,16 @@
+footer.footer
+  .container.footer__container
+    .footer__left
+      .copyright
+        .copyright__date 2021
+        .copyright__name Tesseract Co
+    .footer__center
+      nav.navigation
+        ul.menu.menu_footer
+          each name in ['About', 'Facts', 'History', 'Gallery', 'Contacts']
+              li(class=`menu__item`)
+                a(class=`menu__link` href='#')= name
+    .footer__right
+      .contact
+        a(href="mailto:mail@email.com" class="contact__email") mail@email.com
+        a(href="tel:+71234567890" class="contact__phone") +7 123 456-78-90

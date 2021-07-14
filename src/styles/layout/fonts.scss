@@ -1,0 +1,79 @@
+// roboto
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto/roboto-regular.woff2') format('woff2'),
+        url('../fonts/roboto/roboto-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'roboto-bold';
+  src: url('../fonts/roboto/roboto-bold.woff2') format('woff2'),
+        url('../fonts/roboto/roboto-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'roboto-light';
+  src: url('../fonts/roboto/roboto-light.woff2') format('woff2'),
+        url('../fonts/roboto/roboto-light.woff') format('woff');
+}
+
+// roboto-mono
+@font-face {
+  font-family: 'roboto-mono';
+  src: url('../fonts/robotomono/robotomono-regular.woff2') format('woff2'),
+        url('../fonts/robotomono/robotomono-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'roboto-mono-bold';
+  src: url('../fonts/robotomono/robotomono-bold.woff2') format('woff2'),
+        url('../fonts/robotomono/robotomono-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'roboto-mono-light';
+  src: url('../fonts/robotomono/robotomono-light.woff2') format('woff2'),
+        url('../fonts/robotomono/robotomono-light.woff') format('woff');
+}
+
+
+// font-face minix
+@mixin roboto($style: 'regular') {
+  @if $style == 'regular' {
+    font-family: 'roboto-regular', Verdana, Tahoma, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @if $style == 'bold' {
+    font-family: 'roboto-bold', Verdana, Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @if $style == 'italic' {
+    font-family: 'roboto-light', Verdana, Tahoma, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+} 
+
+@mixin roboto-mono($style: 'regular') {
+  @if $style == 'regular' {
+    font-family: 'roboto-mono-regular', Verdana, Tahoma, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @if $style == 'bold' {
+    font-family: 'roboto-mono-bold', Verdana, Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @if $style == 'italic' {
+    font-family: 'roboto-mono-light', Verdana, Tahoma, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+} 

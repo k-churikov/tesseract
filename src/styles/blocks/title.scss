@@ -1,0 +1,9 @@
+.title {
+  @include roboto('bold');
+  font-size: 55px;
+  color: #fff;
+}
+
+.title__upper {
+  text-transform: uppercase;
+}

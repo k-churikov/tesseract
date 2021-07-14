@@ -1,0 +1,17 @@
+header.header
+  .container.header__container
+    .header__left
+      a(href="/").logo
+        span.logo__name Tesseract
+        span.logo__sup 92472
+    .header__right
+      button.hamburger
+        .hamburger__line
+      ul.language 
+        each name in ['ru', 'en']
+          if name == 'en'
+            li(class=`language__item language__item_active`)
+              a(class=`language__link` href='#')= name
+          else  
+            li(class=`language__item`)
+              a(class=`language__link` href='#')= name

@@ -1,0 +1,44 @@
+.footer {
+  grid-area: footer;
+  position: relative;
+  color: $footer-color;
+  background-color: $footer-background;
+  padding: 25px 0;
+}
+
+.footer__container {
+  display: grid;
+  grid-template: 
+    "left center right" 1fr
+    / min-content 1fr min-content;
+  align-items: center;
+  height: 100%;
+}
+
+.footer__left {
+  grid-area: left;
+}
+
+.footer__center {
+  grid-area: center;
+  justify-self: center;
+}
+
+.footer__right {
+  grid-area: right;
+}
+
+@include media-breakpoint-down(lg) {
+  .footer__container {
+    grid-template: 
+    "center center" 
+    "left right" 1fr
+    / 1fr 1fr;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .footer {
+    padding: 15px 0;
+  }
+}

@@ -1,0 +1,20 @@
+.contact {
+  text-align: right;
+  @include roboto-mono('bold');
+  font-size: 22px;
+  white-space: nowrap;
+  padding-left: 30px;
+}
+
+.contact__email,
+.contact__phone {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+@include media-breakpoint-down(xl) {
+  .contact {
+    font-size: 20px;
+  }
+}

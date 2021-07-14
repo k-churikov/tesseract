@@ -1,0 +1,66 @@
+// Setup vars
+$maincontainer-width: 100%;
+
+$header-min-height: min-content;
+
+$footer-background: #33435A;
+$footer-color: #fff;
+$footer-min-height: min-content;
+$active: #f72b88;
+$active-dark: #ff0073;
+
+$container-width: (
+  // xs: auto,
+  // sm: 540px,
+  // md: 720px,
+  // lg: 960px,
+  // xl: 1140px,
+  xxl: 1440px
+);
+
+// Breakpoints
+$grid-breakpoints: (
+  // X-Small devices (portrait phones, 320px and up) or
+  // X-Small devices (portrait phones, less than 576px)
+  xs: 320px,
+
+  // Small devices (landscape phones, 576px and up) or
+  // Small devices (landscape phones, less than 576px)
+  sm: 576px,
+
+  // Medium devices (tablets, 768px and up) or
+  // Medium devices (tablets, less than 768px)
+  md: 768px,
+
+  // Large devices (laptops, 992px and up) or
+  // Large devices (laptops, less than 992px) 
+  lg: 992px,
+
+  // X-Large devices (large desktops, 1200px and up) or
+  // X-Large devices (large desktops, less than 1200px)
+  xl: 1200px,
+
+  // XX-Large devices (larger desktops, 1440px and up) or
+  // XX-Large devices (larger desktops, less than 1440px)
+  xxl: 1440px
+);
+
+// Vendor
+@import '../../node_modules/normalize.css/normalize';
+
+// Helpers
+@import './helpers/mixins.scss';
+@import './helpers/sassvg.scss';
+
+// Layout
+@import './layout/fonts.scss';
+@import './layout/setups.scss';
+
+// Sprite
+@import './sprite/sprite.scss';
+
+// Blocks
+@import './blocks/**/*.scss';
+
+// Widgets
+// import css plugins

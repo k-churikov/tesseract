@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:k-churikov/tesseract.git"
   },
   "description": "Tesseract Pege",
   "private": true,
